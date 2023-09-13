@@ -12,12 +12,12 @@ return new class extends Migration {
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('uri');
-            $table->string('thumbnail');
-            $table->timestamp('begin_at');
-            $table->timestamp('end_at');
-            $table->string('price');
+            $table->string('name')->nullable();
+            $table->string('uri')->nullable();
+            $table->string('thumbnail')->nullable();
+            $table->timestamp('begin_at')->nullable();
+            $table->timestamp('end_at')->nullable();
+            $table->string('price')->nullable();
             $table->timestamps();
         });
     }
